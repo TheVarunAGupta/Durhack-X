@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="crystalBall.css">
+    <title>Durhack Crystal Ball</title>
+</head>
+<body>
+    <div class="center">
+        <h1>Who will win?</h1>
+        <p>Pit the world's biggest stars against each other in the most absurd, irrelevant, and glorious competitions imaginable. Simply choose an event with your favourite two celebrities and the crystal ball will calculate using our algorithm who is more likely to win!</p>
+    </div>
+
+    <div class="inputs">
+        <label for="player1">Choose your first player:</label>
+        <select name="Player 1" id="player1">
+            {% for ath in athletes %}
+            <option value="{{ ath }}">{{ ath }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <div class="inputs">
+        <label for="player2">Choose your second player:</label>
+        <select name="Player 2" id="player2">
+            {% for ath in athletes %}
+            <option value="{{ ath }}">{{ ath }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <div class="inputs">
+        <label for="event">Choose your event:</label>
+        <select name="event" id="event">
+            {% for act in activities %}
+            <option value="{{ act }}">{{ act }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <div class="center">
+        <button id="simulateBtn" class="btn btn-primary" onClick="shake()">Shake</button> 
+    </div>
+    
+    <div>
+        <img id="ball" alt="Crystal Ball" src="pixil-frame-0.png" width="387.5" height="375">
+    </div>
+
+    <!-- Results container -->
+    <div id="results" style="margin-top:20px; font-weight:bold;"></div>
+
+    <script src="crystalBall.js"></script>
+
+    <script>
+        document.getElementById('simulateBtn').addEventListener('click', async () => {
+            const athlete1 = document.getElementById('player1').value;
+            const athlete2 = document.getElementById('player2').value;
+            const activity = document.getElementById('event').value;
+
+            const response = await fetch('/compare', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({athlete1, athlete2, activity})
+            });
+
+            const result = await response.json();
+            const resultsDiv = document.getElementById('results');
+            if (result.error) {
+                resultsDiv.innerText = result.error;
+            } else {
+                resultsDiv.innerText = `${result.winner} wins!\n\n${result.commentary}`;
+            }
+        });
+    </script>
+</body>
+</html>
