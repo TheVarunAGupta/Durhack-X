@@ -182,7 +182,7 @@
         },
         {
             "name": "Jackie Chan",
-            "sport": "Martial Artsist / Actor",
+            "sport": "Martial Artist / Actor",
             "gender": "Male",
             "attributes": {
                 "height": -5,
@@ -262,7 +262,7 @@
         },
         {
             "name": "Donald Trump",
-            "sport": "American Persident?",
+            "sport": "American President",
             "gender": "Male",
             "attributes": {
                 "height": 8,
@@ -301,7 +301,7 @@
             }
         },
         {
-            "name": "Catilin Clark",
+            "name": "Caitlin Clark",
             "sport": "Basketball",
             "gender": "Female",
             "attributes": {
