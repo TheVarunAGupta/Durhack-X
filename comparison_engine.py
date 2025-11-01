@@ -3,7 +3,7 @@ import os
 from google import genai
 
 api_key = os.environ.get('GEMINI_API_KEY')
-client = genai.Client(api_key='AIzaSyCTOHSpQkj6PbEKTYnmvfCdT6FKBQibo_s')
+client = genai.Client(api_key=api_key)
 
 athletes = {
     'Usain Bolt': {
