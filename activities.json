@@ -1,0 +1,126 @@
+{
+    "activities": [
+        {
+            "activity": "Fastest time to finish a pint of beer",
+            "attributes": [
+                "height", 
+                "weight",
+                "water",
+                "speed"
+            ]
+        },
+
+        {
+            "activity": "Rap Battle",
+            "attributes": [
+                "age" ,
+                "intelligence"
+            ]
+        },
+        {
+            "activity": "Egg and Spoon",
+            "attributes": [
+                "balance",
+                "speed"
+            ]
+        },
+        {
+            "activity": "Most plates of Sunday roasts",
+            "attributes": [
+                "weight",
+                "endurance"
+            ]
+        },
+        {
+            "activity": "Cheese Rolling",
+            "attributes": [
+                "weight",
+                "spin",
+                "agility"
+            ]
+        },
+        {
+            "activity": "Typing Speed Test",
+            "attributes": [
+                "intelligence",
+                "speed"
+
+            ]
+        },
+
+        {
+            "activity": "Spouse Carrying Race",
+            "attributes": [
+                "spouse",
+                "strength",
+                "speed"
+            ]
+        },
+        {
+            "activity":"Quidditch",
+            "attributes": [
+                "speed",
+                "ball",
+                "height",
+                "agility",
+                "balance"
+
+            ]
+        },
+        {
+            "activity":"Thumb War",
+            "attributes": [
+                "strength",
+                "intelligence",
+                "agility"
+            ]
+        },
+        {
+            "activity":"Fishing the biggest catch",
+            "attributes": [
+                "water",
+                "intelligence"
+            ]
+        },
+        {
+            "activity":"Juggling",
+            "attributes": [
+                "ball",
+                "balance"
+            ]
+        },
+        {
+            "activity":"Reaching the top shelf",
+            "attributes": [
+                "height",
+                "agility"
+            ]
+        },
+        {
+            "activity":"Longest time staying awake",
+            "attributes": [
+                "intelligence",
+                "endurance"
+            ]
+        },
+        {
+            "activity":"Hula Hooping",
+            "attributes": [
+                "balance",
+                "agility",
+                "endurance",
+                "weight"
+            ]
+        },
+        {
+            "activity": "Bingo",
+            "attributes": [
+                "age",
+                "intelligence"
+            ]
+
+
+        }
+
+    ]
+}
