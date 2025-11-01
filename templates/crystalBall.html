@@ -80,7 +80,7 @@
                 <option value="Longest time staying awake">Longest time staying awake</option>
                 <option value="Reaching the top shelf">Reaching the top shelf</option>
                 <option value="Juggling">Juggling</option>
-                <option value="Fishing the biggest catch">Serena Williams</option>
+                <option value="Fishing the biggest catch">Fishing the biggest catch</option>
                 <option value="Thumb War">Thumb War</option>
                 <option value="Quidditch match">Quidditch match</option>
                 <option value="Spouse Carrying Race">Spouse Carrying Race</option>
@@ -94,7 +94,7 @@
         </div>
 
         <div class="center">
-            <button class="btn btn-primary" onClick="shake()">Shake</button> 
+            <button id="simulateBtn" class="btn btn-primary" onClick="shake()">Shake</button> 
         </div>
         
         <div>
@@ -107,3 +107,26 @@
 </html>
 
 <script src="crystalBall.js"></script>
+
+
+<script>
+    document.getElementById('simulateBtn').addEventListener('click', async () => {
+        const athlete1 = document.getElementById('player1').value;
+        const athlete2 = document.getElementById('player2').value;
+        const activity = document.getElementById('event').value;
+
+        const response = await fetch('/compare', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({athlete1, athlete2, activity})
+        });
+
+        const result = await response.json();
+        if (result.error) {
+            document.getElementById('results').innerText = result.error;
+        } else {
+            document.getElementById('results').innerText = 
+                `${result.winner} wins!\nCommentary: ${result.commentary}`;
+        }
+    });
+</script>
