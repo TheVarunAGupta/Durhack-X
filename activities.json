@@ -2,122 +2,122 @@
     "activities": [
         {
             "activity": "Fastest time to finish a pint of beer",
-            "attributes": [
-                "height", 
-                "weight",
-                "water",
-                "speed"
-            ]
+            "attributes": {
+                "height": 0.4,
+                "weight": 0.3,
+                "water": 0.6,
+                "speed": 0.5
+            }
         },
 
         {
             "activity": "Rap Battle",
-            "attributes": [
-                "age" ,
-                "intelligence"
-            ]
+            "attributes": {
+                "age": 0.5,
+                "intelligence": 0.8
+            }
         },
         {
             "activity": "Egg and Spoon",
-            "attributes": [
-                "balance",
-                "speed"
-            ]
+            "attributes": {
+                "balance": 0.7,
+                "speed": 0.4
+            }
         },
         {
             "activity": "Most plates of Sunday roasts",
-            "attributes": [
-                "weight",
-                "endurance"
-            ]
+            "attributes": {
+                "weight": 0.6,
+                "endurance": 0.8
+            }
         },
         {
             "activity": "Cheese Rolling",
-            "attributes": [
-                "weight",
-                "spin",
-                "agility"
-            ]
+            "attributes": {
+                "weight": 0.6,
+                "spin": 0.5,
+                "agility": 0.7
+            }
         },
         {
             "activity": "Typing Speed Test",
-            "attributes": [
-                "intelligence",
-                "speed"
-
-            ]
+            "attributes": {
+                "intelligence": 0.8,
+                "speed": 0.9
+            }
         },
 
         {
             "activity": "Spouse Carrying Race",
-            "attributes": [
-                "spouse",
-                "strength",
-                "speed"
-            ]
+            "attributes": {
+                "spouse": 1.0,
+                "strength": 0.8,
+                "speed": 0.6
+            }
         },
         {
             "activity":"Quidditch",
-            "attributes": [
-                "speed",
-                "ball",
-                "height",
-                "agility",
-                "balance"
+            "attributes": {
+                "speed": 0.8,
+                "ball": 0.9,
+                "height": 0.7,
+                "agility": 0.6,
+                "balance": 0.5
 
-            ]
+            }
         },
         {
             "activity":"Thumb War",
-            "attributes": [
-                "strength",
-                "intelligence",
-                "agility"
-            ]
+            "attributes": {
+                "strength": 0.8,
+                "intelligence": 0.6,
+                "agility": 0.7
+            }
         },
         {
             "activity":"Fishing the biggest catch",
-            "attributes": [
-                "water",
-                "intelligence"
-            ]
+            "attributes": {
+                "water": 0.8,
+                "intelligence": 0.6
+            }
         },
         {
             "activity":"Juggling",
-            "attributes": [
-                "ball",
-                "balance"
-            ]
+            "attributes": {
+                "agility": 0.7,
+                "balance": 0.6,
+                "ball": 0.9
+            }
         },
         {
             "activity":"Reaching the top shelf",
-            "attributes": [
-                "height",
-                "agility"
-            ]
+            "attributes": {
+                "height": 0.9,
+                "agility": 0.6
+            }
         },
         {
             "activity":"Longest time staying awake",
-            "attributes": [
-                "intelligence",
-                "endurance"
-            ]
+            "attributes": {
+                "age": 0.5,
+                "endurance": 0.9
+            }
         },
         {
             "activity":"Hula Hooping",
-            "attributes": [
-                "balance",
-                "agility",
-                "endurance",
-                "weight"
-            ]
+            "attributes": {
+                "balance": 0.8,
+                "agility": 0.7,
+                "endurance": 0.6,
+                "weight": 0.5
+            }
         },
         {
             "activity": "Bingo",
-            "attributes": [
-                "age",
-                "intelligence"
-            ]
+            "attributes": {
+                "age": 0.9,
+                "intelligence": 0.8
+            }
 
 
         }

@@ -2,6 +2,7 @@ import random
 import os
 from dotenv import load_dotenv
 from google import genai
+import json
 
 load_dotenv()
 
@@ -10,21 +11,22 @@ if not api_key:
     raise ValueError('Missing GEMINI_API_KEY in environment!')
 client = genai.Client(api_key=api_key)
 
-athletes = {
-    'Usain Bolt': {
-        'Sprinting': 10, 'Strength': 3, 'Height': 7,
-        'Endurance': 8, 'Agility': 9,
-    },
-    'Michael Phelps': {
-        'Sprinting': 5, 'Strength': 5, 'Height': 8,
-        'Endurance': 10, 'Agility': 6,
-    }
-}
+with open('athelete_attributes.json', 'r') as f:
+    data = json.load(f)
 
-activity =   {
-    'name': 'Fastest time to down a pint',
-    'attributes': { 'Height': 0.4, 'Weight': 0.3, 'Water': 0.6, 'Speed': 0.5}
-  }
+athletes = {ath['name']: ath['attributes'] for ath in data['athletes']}
+
+with open('activities.json', 'r') as f:
+    data = json.load(f)
+
+activities = {}
+for act in data["activities"]:
+    # Optionally, standardise attribute keys to match athlete attributes
+    attributes = {k.lower(): v for k, v in act["attributes"].items()}
+    activities[act["activity"]] = {
+        "name": act["activity"],
+        "attributes": attributes
+    }
 
 def generate_commentary(athlete1: str, athlete2: str, activity_name: str, winner: str, total: float):
     prompt = (
@@ -85,9 +87,9 @@ def compare_athletes(athlete1_name: str, athlete2_name: str, activity: dict):
     return results
 
 if __name__ == '__main__':
-    athlete1 = 'Usain Bolt'
-    athlete2 = 'Michael Phelps'
-    activity_selected = activity
+    athlete1 = 'Donald Trump'
+    athlete2 = 'Tiger Woods'
+    activity_selected = activities['Fastest time to finish a pint of beer']
 
     result = compare_athletes(athlete1, athlete2, activity_selected)
     winner_name = result['winner']
