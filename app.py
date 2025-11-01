@@ -91,7 +91,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('test.html', athletes=list(athletes.keys()), activities=list(activities.keys()))
+    return render_template('crystalBall.html', athletes=list(athletes.keys()), activities=list(activities.keys()))
 
 @app.route('/compare', methods=['POST'])
 def compare():
@@ -110,14 +110,14 @@ def compare():
 
     winner_name = result['winner']
     total_diff = result['difference']
-    
+
     commentary = generate_commentary(athlete1, athlete2, activity_name, winner_name, total_diff)
 
     result['commentary'] = commentary
     return jsonify(result)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=5001)
 
 # if __name__ == '__main__':
 #     athlete1 = 'David Attenborough'
