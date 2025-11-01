@@ -1,0 +1,26 @@
+Athlete	Gender	Sport
+Hiyori Kon	Female	Sumo Wrestling
+Magnus Carlsen	Male	Chess
+Marta Vieira da Silva	Female	Football (Soccer)
+Michael Jordan	Male	Basketball
+Toni Stone	Female	Baseball
+Serena Williams	Female	Tennis
+Michael Phelps	Male	Swimming
+Allyson Felix	Female	Athletics (Track & Field)
+Marianne Vos	Female	Cycling
+Rafael Aghayev	Male	Karate
+Ryoko Tani	Female	Judo
+Valentina Vezzali	Female	Fencing
+Yuzuru Hanyu	Male	Figure Skating
+Kim Soo-Nyung	Female	Archery
+Tiger Woods	Male	Golf
+Portia Woodman	Female	Rugby Sevens
+Ma Long	Male	Table Tennis
+Lasha Talakhadze	Male	Weightlifting
+Ellen MacArthur	Female	Sailing
+Marina Chernova	Female	Acrobatic Gymnastics
+Lewis Hamilton	Male	Motor Racing (Formula 1)
+Faker (Lee Sang-hyeok)	Male	Esports
+Ellyse Perry	Female	Cricket
+Maggie Steffens	Female	Water Polo
+Kevin Martin	Male	Curling
