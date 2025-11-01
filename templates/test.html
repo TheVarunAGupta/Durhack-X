@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Durhack Crystal Ball</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+        select, button { padding: 10px; margin: 10px; font-size: 16px; }
+        #results { margin-top: 20px; font-size: 18px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Which athlete will win?</h1>
+
+    <div>
+        <label for="athlete1">Athlete 1:</label>
+        <select id="athlete1">
+            {% for ath in athletes %}
+            <option value="{{ ath }}">{{ ath }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <div>
+        <label for="athlete2">Athlete 2:</label>
+        <select id="athlete2">
+            {% for ath in athletes %}
+            <option value="{{ ath }}">{{ ath }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <div>
+        <label for="activity">Activity:</label>
+        <select id="activity">
+            {% for act in activities %}
+            <option value="{{ act }}">{{ act }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <button id="simulateBtn">Simulate</button>
+
+    <div id="results"></div>
+
+    <script>
+        document.getElementById('simulateBtn').addEventListener('click', async () => {
+            const athlete1 = document.getElementById('athlete1').value;
+            const athlete2 = document.getElementById('athlete2').value;
+            const activity = document.getElementById('activity').value;
+
+            const response = await fetch('/compare', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({athlete1, athlete2, activity})
+            });
+
+            const result = await response.json();
+            if (result.error) {
+                document.getElementById('results').innerText = result.error;
+            } else {
+                document.getElementById('results').innerText = 
+                    `${result.winner} wins!\nCommentary: ${result.commentary}`;
+            }
+        });
+    </script>
+</body>
+</html>
