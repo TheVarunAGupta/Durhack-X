@@ -111,14 +111,14 @@
 
 <script>
     document.getElementById('simulateBtn').addEventListener('click', async () => {
-        const athlete1 = document.getElementById('player1').value;
-        const athlete2 = document.getElementById('player2').value;
-        const activity = document.getElementById('event').value;
+        const player1 = document.getElementById('player1').value;
+        const player2 = document.getElementById('player2').value;
+        const event = document.getElementById('event').value;
 
         const response = await fetch('/compare', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({athlete1, athlete2, activity})
+            body: JSON.stringify({player1, player2, event})
         });
 
         const result = await response.json();
@@ -129,4 +129,5 @@
                 `${result.winner} wins!\nCommentary: ${result.commentary}`;
         }
     });
+    
 </script>

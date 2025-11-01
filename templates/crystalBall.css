@@ -59,14 +59,14 @@ button{
 }
 
 h1{
-    font-size: 4em;
+    font-size: 3em;
     font-family: Minecraft;
 }
 
 p {
     font-family: Minecraft;
     text-align: center;
-    font-size:1.25em;
+    font-size:1em;
     max-width: 65ch;
     margin-left: auto;
     margin-right:auto;
