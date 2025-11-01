@@ -1,0 +1,8 @@
+50 sportspeople, 25 weird sports
+each weird sport has attributes such as water, strength, speed, etc
+each sportspersion has attribute with a rating out of 10 e.g speed 8/10
+two sportspeople are chosen and a weird sport for them to compete in
+if the sport contains any of the attributes the sportspeople have, their rating is added to a baseline point system
+whoever has the greater points wins, but some randomness added 
+an AI will create a message depending on the points
+output in a crystal ball website
