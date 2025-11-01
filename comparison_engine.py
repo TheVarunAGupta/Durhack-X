@@ -1,3 +1,4 @@
+from flask import Flask, render_template, request, jsonify
 import random
 import os
 from dotenv import load_dotenv
@@ -20,19 +21,19 @@ with open('activities.json', 'r') as f:
     data = json.load(f)
 
 activities = {}
-for act in data["activities"]:
-    # Optionally, standardise attribute keys to match athlete attributes
-    attributes = {k.lower(): v for k, v in act["attributes"].items()}
-    activities[act["activity"]] = {
-        "name": act["activity"],
-        "attributes": attributes
+for act in data['activities']:
+    attributes = {k.lower(): v for k, v in act['attributes'].items()}
+    activities[act['activity']] = {
+        'name': act['activity'],
+        'attributes': attributes
     }
 
 def generate_commentary(athlete1: str, athlete2: str, activity_name: str, winner: str, total: float):
     prompt = (
         f'Write a funny, dramatic commentary about a competition between '
         f'{athlete1} and {athlete2} in {activity_name}. '
-        f'{winner} won. The larger the difference ({total:.2f}), the more dramatic and humorous it should be. '
+        f'{winner} won. (For context: the difference between their scores was {total:.2f}, '
+        f'but do not include this number in your commentary.) '
         f'Keep it 2-3 sentences and make it funny.'
     )
     
@@ -86,16 +87,47 @@ def compare_athletes(athlete1_name: str, athlete2_name: str, activity: dict):
     }
     return results
 
-if __name__ == '__main__':
-    athlete1 = 'Donald Trump'
-    athlete2 = 'Tiger Woods'
-    activity_selected = activities['Fastest time to finish a pint of beer']
+app = Flask(__name__)
 
+@app.route('/')
+def index():
+    return render_template('index.html', athletes=list(athletes.keys()), activities=list(activities.keys()))
+
+@app.route('/compare', methods=['POST'])
+def compare():
+    data = request.json
+    athlete1 = data.get('athlete1')
+    athlete2 = data.get('athlete2')
+    activity_name = data.get('activity')
+
+    if not athlete1 or not athlete2 or not activity_name:
+        return jsonify({'error': 'Missing selection'}), 400
+    
+    activity_selected = activities.get(activity_name)
     result = compare_athletes(athlete1, athlete2, activity_selected)
+    if 'error' in result:
+        return jsonify(result), 400
+
     winner_name = result['winner']
     total_diff = result['difference']
-    commentary = generate_commentary(athlete1, athlete2, activity_selected['name'], winner_name, total_diff)
+    commentary = generate_commentary(athlete1, athlete2, activity_name, winner_name, total_diff)
 
-    print(result)
-    print('\nFunny Commentary: ')
-    print(commentary)
+    result['commentary'] = commentary
+    return jsonify(result)
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+# if __name__ == '__main__':
+#     athlete1 = 'David Attenborough'
+#     athlete2 = 'Scarlett Johansson'
+#     activity_selected = activities['Egg and Spoon']
+
+#     result = compare_athletes(athlete1, athlete2, activity_selected)
+#     winner_name = result['winner']
+#     total_diff = result['difference']
+#     commentary = generate_commentary(athlete1, athlete2, activity_selected['name'], winner_name, total_diff)
+
+#     print(result)
+#     print('\nFunny Commentary: ')
+#     print(commentary)
