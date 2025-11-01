@@ -19,7 +19,7 @@
 
 @font-face{
     font-family: Minecraft;
-    src: url(Minercaft.ttf);
+    src: url(Minecraft.ttf);
 }
 
 body{
@@ -41,7 +41,9 @@ body{
 }
 
 img{
-    padding-left: 33em;
+    display: block;
+    margin: 0 auto;
+    width: 30%;
     padding-top: 2.5em;
 }
 

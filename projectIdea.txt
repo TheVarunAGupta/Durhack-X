@@ -6,3 +6,22 @@ if the sport contains any of the attributes the sportspeople have, their rating 
 whoever has the greater points wins, but some randomness added 
 an AI will create a message depending on the points
 output in a crystal ball website
+
+
+
+
+with open('athelete_attributes.json', 'r') as f:
+    data = json.load(f)
+
+athletes = {ath['name']: ath['attributes'] for ath in data['athletes']}
+
+with open('activities.json', 'r') as f:
+    data = json.load(f)
+
+activities = {}
+for act in data['activities']:
+    attributes = {k.lower(): v for k, v in act['attributes'].items()}
+    activities[act['activity']] = {
+        'name': act['activity'],
+        'attributes': attributes
+    }

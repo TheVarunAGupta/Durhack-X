@@ -12,7 +12,7 @@
 
         <div class="inputs">
             <label for="player1">Choose your first player:</label>
-            <select name="Player 1" id="player1">
+            <select id="player1">
                 <option value="Hiyori Kon">Hyori Kon</option>
                 <option value="Magnus Carlsen">Magnus Carlsen</option>
                 <option value="Lionel Messi">Lionel Messi</option>
@@ -42,7 +42,7 @@
         </div>
         <div class="inputs">
             <label for="player2">Choose your second player:</label>
-            <select name="Player 2" id="player2">
+            <select id="player2">
                 <option value="Hiyori Kon">Hyori Kon</option>
                 <option value="Magnus Carlsen">Magnus Carlsen</option>
                 <option value="Lionel Messi">Lionel Messi</option>
@@ -95,17 +95,19 @@
             <button id="simulateBtn" class="btn btn-primary" onClick="shake()">Shake</button> 
         </div>
         
+        <div id="results" class="center" style="margin-top: 40px; font-weight: bold;"></div>
+
         <div>
             <img id="ball" alt="Crystal Ball" src="pixil-frame-0.png" width="387.5" height="375">
         </div>
 
-        <div id="results" class="center" style="margin-top: 40px; font-weight: bold;">
-            </div>
+
     </body>
 </html>
 
 <script src="crystalBall.js"></script>
 
+<div id="results" style="margin-top:20px; font-weight:bold;"></div>
 
 <script>
     document.getElementById('simulateBtn').addEventListener('click', async () => {
