@@ -33,8 +33,16 @@ body{
 
 }
 
+.inputs{
+    text-align: center;
+    padding-top: 2em;
+    font-family:Minecraft;
+    font-size:1em;
+}
+
 img{
     padding-left: 33em;
+    padding-top: 2.5em;
 }
 
 button{
@@ -51,14 +59,14 @@ button{
 }
 
 h1{
-    font-size: 5em;
+    font-size: 4em;
     font-family: Minecraft;
 }
 
 p {
     font-family: Minecraft;
     text-align: center;
-    font-size:1.5em;
+    font-size:1.25em;
     max-width: 65ch;
     margin-left: auto;
     margin-right:auto;
