@@ -1,0 +1,505 @@
+{
+    "athletes": [
+        {
+            "name": "Hiyori Kon",
+            "sport": "Sumo Wrestling",
+            "gender": "Female",
+            "attributes": {
+                "height": -5,
+                "weight": 10,
+                "water": ,
+                "age": ,
+                "intelligence": ,
+                "speed": ,
+                "balance": ,
+                "spin": ,
+                "endurance": ,
+                "strength": ,
+                "spouse": -10,
+                "ball": ,
+                "agility": 
+            }
+        },
+        {
+            "name": "Magnus Carlsen",
+            "sport": "Chess",
+            "gender": "Male",
+            "attributes": {
+                "height": 0,
+                "weight": -2.5,
+                "water": ,
+                "age": ,
+                "intelligence": ,
+                "speed": ,
+                "balance": ,
+                "spin": ,
+                "endurance": ,
+                "strength": ,
+                "spouse": 10,
+                "ball": ,
+                "agility":
+
+            }
+        },
+        {
+            "name": "Lionel Messi",
+            "sport": "Football",
+            "gender": "Male",
+            "attributes": {
+                "height": -1,
+                "weight": -2.5,
+                "water": ,
+                "age": ,
+                "intelligence": ,
+                "speed": ,
+                "balance": ,
+                "spin": ,
+                "endurance": ,
+                "strength": ,
+                "spouse": ,
+                "ball": ,
+                "agility":
+            }
+        },
+        {
+            "name": "Michael Jordan",
+            "sport": "Basketball",
+            "gender": "Male",
+            "attributes": {
+                "height": 10,
+                "weight": 6.5,
+                "water": ,
+                "age": ,
+                "intelligence": ,
+                "speed": ,
+                "balance": ,
+                "spin": ,
+                "endurance": ,
+                "strength": ,
+                "spouse": ,
+                "ball": ,
+                "agility":
+            }
+        },
+        {
+            "name": "Toni Stone",
+            "sport": "Baseball",
+            "gender": "Female",
+            "attributes": {
+                "height": 2,
+                "weight": 1,
+                "water": ,
+                "age": ,
+                "intelligence": ,
+                "speed": ,
+                "balance": ,
+                "spin": ,
+                "endurance": ,
+                "strength": ,
+                "spouse": ,
+                "ball": ,
+                "agility":
+            }
+        },
+        {
+            "name": "Serena Williams",
+            "sport": "Tennis",
+            "gender": "Female",
+            "attributes": {
+                "height": 5,
+                "weight": 2.5,
+                "water": ,
+                "age": ,
+                "intelligence": ,
+                "speed": ,
+                "balance": ,
+                "spin": ,
+                "endurance": ,
+                "strength": ,
+                "spouse": ,
+                "ball": ,
+                "agility":
+            }
+        },
+        {
+            "name": "Michael Phelps",
+            "sport": "Swimming",
+            "gender": "Male",
+            "attributes": {
+                "height": 8,
+                "weight": 3.5,
+                "water": ,
+                "age": ,
+                "intelligence": ,
+                "speed": ,
+                "balance": ,
+                "spin": ,
+                "endurance": ,
+                "strength": ,
+                "spouse": ,
+                "ball": ,
+                "agility":
+            }
+        },
+        {
+            "name": "Allyson Felix",
+            "sport": "Atheletics",
+            "gender": "Female",
+            "attributes": {
+                "height": 1.5,
+                "weight": -3.5,
+                "water": ,
+                "age": ,
+                "intelligence": ,
+                "speed": ,
+                "balance": ,
+                "spin": ,
+                "endurance": ,
+                "strength": ,
+                "spouse": ,
+                "ball": ,
+                "agility":
+            }
+        },
+        {
+            "name": "Marianne Vos",
+            "sport": "Cycling",
+            "gender": "Female",
+            "attributes": {
+                "height": 1.5,
+                "weight": -2.5,
+                "water": ,
+                "age": ,
+                "intelligence": ,
+                "speed": ,
+                "balance": ,
+                "spin": ,
+                "endurance": ,
+                "strength": ,
+                "spouse": ,
+                "ball": ,
+                "agility":
+            }
+        },
+        {
+            "name": "Rafael Aghayev",
+            "sport": "Karate",
+            "gender": "Male",
+            "attributes": {
+                "height": -5,
+                "weight": -1,
+                "water": ,
+                "age": ,
+                "intelligence": ,
+                "speed": ,
+                "balance": ,
+                "spin": ,
+                "endurance": ,
+                "strength": ,
+                "spouse": ,
+                "ball": ,
+                "agility":
+            }
+        },
+        {
+            "name": "Ryoko Tani",
+            "sport": "Judo",
+            "gender": "Female",
+            "attributes": {
+                "height": -10,
+                "weight": -6,
+                "water": ,
+                "age": ,
+                "intelligence": ,
+                "speed": ,
+                "balance": ,
+                "spin": ,
+                "endurance": ,
+                "strength": ,
+                "spouse": ,
+                "ball": ,
+                "agility":
+            }
+        },
+        {
+            "name": "Valentina Vezzali",
+            "sport": "Fencing",
+            "gender": "Female",
+            "attributes": {
+                "height": -0.5,
+                "weight": -2.5,
+                "water": ,
+                "age": ,
+                "intelligence": ,
+                "speed": ,
+                "balance": ,
+                "spin": ,
+                "endurance": ,
+                "strength": ,
+                "spouse": ,
+                "ball": ,
+                "agility":
+            }
+        },
+        {
+            "name": "Yuzuru Hanyu",
+            "sport": "Figure Skating",
+            "gender": "Male",
+            "attributes": {
+                "height": -3,
+                "weight": -7,
+                "water": ,
+                "age": ,
+                "intelligence": ,
+                "speed": ,
+                "balance": ,
+                "spin": ,
+                "endurance": ,
+                "strength": ,
+                "spouse": ,
+                "ball": ,
+                "agility":
+            }
+        },
+        {
+            "name": "Kim Soonyung",
+            "sport": "Archery",
+            "gender": "Female",
+            "attributes": {
+                "height": -2.5,
+                "weight": -4.5,
+                "water": ,
+                "age": ,
+                "intelligence": ,
+                "speed": ,
+                "balance": ,
+                "spin": ,
+                "endurance": ,
+                "strength": ,
+                "spouse": ,
+                "ball": ,
+                "agility":
+            }
+        },
+        {
+            "name": "Tiger Woods",
+            "sport": "Golf",
+            "gender": "Male",
+            "attributes": {
+                "height": 3.5,
+                "weight": 2,
+                "water": ,
+                "age": ,
+                "intelligence": ,
+                "speed": ,
+                "balance": ,
+                "spin": ,
+                "endurance": ,
+                "strength": ,
+                "spouse": ,
+                "ball": ,
+                "agility":
+            }
+        },
+        {
+            "name": "Portia Woodman",
+            "sport": "Rugby Sevens",
+            "gender": "Female",
+            "attributes": {
+                "height": 2,
+                "weight": 3.5,
+                "water": ,
+                "age": ,
+                "intelligence": ,
+                "speed": ,
+                "balance": ,
+                "spin": ,
+                "endurance": ,
+                "strength": ,
+                "spouse": ,
+                "ball": ,
+                "agility":
+            }
+        },
+        {
+            "name": "Ma long",
+            "sport": "Table Tennis",
+            "gender": "Male",
+            "attributes": {
+                "height": -1.5,
+                "weight": -2,
+                "water": ,
+                "age": ,
+                "intelligence": ,
+                "speed": ,
+                "balance": ,
+                "spin": ,
+                "endurance": ,
+                "strength": ,
+                "spouse": ,
+                "ball": ,
+                "agility":
+            }
+        },
+        {
+            "name": "Lasha Talakhadze",
+            "sport": "Weightlifting",
+            "gender": "Male",
+            "attributes": {
+                "height": 9.5,
+                "weight": 10,
+                "water": ,
+                "age": ,
+                "intelligence": ,
+                "speed": ,
+                "balance": ,
+                "spin": ,
+                "endurance": ,
+                "strength": ,
+                "spouse": ,
+                "ball": ,
+                "agility":
+            }
+        },
+        {
+            "name": "Ellen MacArthur",
+            "sport": "Sailing",
+            "gender": "Female",
+            "attributes": {
+                "height": -4,
+                "weight": -3.5,
+                "water": ,
+                "age": ,
+                "intelligence": ,
+                "speed": ,
+                "balance": ,
+                "spin": ,
+                "endurance": ,
+                "strength": ,
+                "spouse": ,
+                "ball": ,
+                "agility":
+            }
+        },
+        {
+            "name": "Marina Chernova",
+            "sport": "Gymnastics",
+            "gender": "Female",
+            "attributes": {
+                "height": -7.5,
+                "weight": -7,
+                "water": ,
+                "age": ,
+                "intelligence": ,
+                "speed": ,
+                "balance": ,
+                "spin": ,
+                "endurance": ,
+                "strength": ,
+                "spouse": ,
+                "ball": ,
+                "agility":
+            }
+        },
+        {
+            "name": "Lewis Hamilton",
+            "sport": "Motor Racing",
+            "gender": "Male",
+            "attributes": {
+                "height": -2,
+                "weight": -3.5,
+                "water": ,
+                "age": ,
+                "intelligence": ,
+                "speed": ,
+                "balance": ,
+                "spin": ,
+                "endurance": ,
+                "strength": ,
+                "spouse": ,
+                "ball": ,
+                "agility":
+            }
+        },
+        {
+            "name": "Faker (Lee Sanghyeok)",
+            "sport": "E-sports",
+            "gender": "Male",
+            "attributes": {
+                "height": -0.5,
+                "weight": -4,
+                "water": ,
+                "age": ,
+                "intelligence": ,
+                "speed": ,
+                "balance": ,
+                "spin": ,
+                "endurance": ,
+                "strength": ,
+                "spouse": ,
+                "ball": ,
+                "agility":
+            }
+        },
+        {
+            "name": "Ellyse Perry",
+            "sport": "Cricket",
+            "gender": "Female",
+            "attributes": {
+                "height": 5.5,
+                "weight": 3.5,
+                "water": ,
+                "age": ,
+                "intelligence": ,
+                "speed": ,
+                "balance": ,
+                "spin": ,
+                "endurance": ,
+                "strength": ,
+                "spouse": ,
+                "ball": ,
+                "agility":
+            }
+        },
+        {
+            "name": "Maggie Stefens",
+            "sport": "Water Polo",
+            "gender": "Female",
+            "attributes": {
+                "height": 7.5,
+                "weight": 3.5,
+                "water": ,
+                "age": ,
+                "intelligence": ,
+                "speed": ,
+                "balance": ,
+                "spin": ,
+                "endurance": ,
+                "strength": ,
+                "spouse": ,
+                "ball": ,
+                "agility":
+            }
+        },
+        {
+            "name": "Kevin Martin",
+            "sport": "Curling",
+            "gender": "Male",
+            "attributes": {
+                "height": 2.5,
+                "weight": 1.5,
+                "water": ,
+                "age": ,
+                "intelligence": ,
+                "speed": ,
+                "balance": ,
+                "spin": ,
+                "endurance": ,
+                "strength": ,
+                "spouse": ,
+                "ball": ,
+                "agility":
+            }
+        },
+    ]
+}
