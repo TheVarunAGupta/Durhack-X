@@ -1,9 +1,11 @@
-function shake(){
+function startshake(){
     var ball = document.getElementById("ball")
-
     ball.classList.add("shake")
+}
 
-    setTimeout(function(){ball.classList.remove("shake");},1000)
+function stopshake(){
+    var ball = document.getElementById("ball")
+    ball.classList.remove("shake")
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -14,6 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const athlete1 = document.getElementById("player1").value;
         const athlete2 = document.getElementById("player2").value;
         const activity = document.getElementById("event").value;
+
+        startshake();
+        resultsDiv.innerText = "Consulting the crystal ball...";
 
         try {
             const response = await fetch("/compare", {
@@ -32,6 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
         } catch (err) {
             console.error("Error during fetch:", err);
             resultsDiv.innerText = "Something went wrong! Try again.";
+        } finally {
+            stopshake();
         }
     });
 });
