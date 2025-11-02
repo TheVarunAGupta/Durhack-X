@@ -41,6 +41,8 @@ body{
     padding-top: 1.5em;
     font-family:Minecraft;
     font-size:1em;
+    z-index: 999;
+    position: relative;
 }
 
 #results{
@@ -59,7 +61,7 @@ body{
 #face1{
     position: absolute;
     padding-top: 10em;
-    padding-left:10em;
+    padding-left: 2em;
     transform: scale(0.4)
 
 }
@@ -68,7 +70,7 @@ body{
     position: absolute;
     top: 0;
     left: 0;
-    transform: scale(1)
+    transform: scale(0.75)
 
 }
 
@@ -76,14 +78,14 @@ body{
     position: absolute;
     top: 0;
     right: 0;
-    transform: scale(1)
+    transform: scale(0.75)
 
 }
 
 #face3{
     position: absolute;
-    padding-top: 15em;
-    padding-left:65em;
+    padding-top: 20em;
+    padding-left: 70em;
     transform: scale(0.75)
 
 }
