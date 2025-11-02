@@ -32,7 +32,14 @@ document.addEventListener("DOMContentLoaded", () => {
             if (result.error) {
                 resultsDiv.innerText = result.error;
             } else {
-                resultsDiv.innerText = `${result.winner} wins!\n\n${result.commentary}`;
+                const message = `${result.winner} wins!\n\n${result.commentary}`;
+                resultsDiv.innerText = message;
+
+                const utterance = new SpeechSynthesisUtterance(message);
+                utterance.rate = 1.0;
+                utterance.pitch = 1.0;
+                utterance.volume = 1.0;
+                speechSynthesis.speak(utterance);
             }
         } catch (err) {
             console.error("Error during fetch:", err);

@@ -86,11 +86,11 @@ def compare_athletes(athlete1_name: str, athlete2_name: str, activity: dict):
         return 'One or both athletes not found'
     
     score1 = calculate_weighted_score(athlete1, weights)
-    print(f' score1: {score1}')
+    # print(f' score1: {score1}')
     score2 = calculate_weighted_score(athlete2, weights)
-    print(f' score2: {score2}')
+    # print(f' score2: {score2}')
     total = abs(score1 - score2)
-    print(f' total: {total}')
+    # print(f' total: {total}')
 
     if score1 > score2:
         winner = athlete1_name
@@ -140,7 +140,7 @@ def compare():
     return jsonify(result)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5002)
+    app.run(debug=True, port=5003)
 
 # if __name__ == '__main__':
 #     athlete1 = 'David Attenborough'
