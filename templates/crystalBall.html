@@ -1,136 +1,72 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="{{ url_for('static', filename='crystalBall.css') }}">
-        <title>Durhack Crystal Ball</title>
-    </head>
-    <body>
-        <div class = "center">
-            <h1>Who will win?</h1>
-            <p>Pit the world's biggest stars against each other in the most absurd, irrelevant, and glorious competitions imaginable. Simply choose an event with your favourite two celebrities and the crystal ball will calculate using our algorithm who is more likely to win!</p>
-        </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Durhack Crystal Ball</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='crystalBall.css') }}">
 
-        <div class="inputs">
-            <label for="player1">Choose your first player:</label>
-            <select id="player1">
-                <option value="Hiyori Kon (Sumo wrestler)">Hyori Kon</option>
-                <option value="Magnus Carlsen (Chess player)">Magnus Carlsen</option>
-                <option value="Lionel Messi (Football player)">Lionel Messi</option>
-                <option value="Michael Jordan (Basketball player)">Michael Jordan</option>
-                <option value="Shohei Ohtani (Baseball player)">Shohei Ohtani</option>
-                <option value="Serena Williams (Tennis player)">Serena Williams</option>
-                <option value="Michael Phelps (Swimmer)">Michael Phelps</option>
-                <option value="Adele (Singer)">Adele</option>
-                <option value="Chris Hoy (Cyclist)">Chris Hoy</option>
-                <option value="Jackie Chan (Martial artist/actor)">Jackie Chan</option>
-                <option value="Keir Starmer (Politician)">Keir Starmer</option>
-                <option value="Jeon Jungkook (Singer)">Jeon Jungkook</option>
-                <option value="Yuzuru Hanyu (Figure skater)">Yuzuru Hanyu</option>
-                <option value="Donald Trump (American president)">Donald Trump</option>
-                <option value="Tiger Woods (Golfer)">Tiger Woods</option>
-                <option value="Caitlin Clark (Basketball player)">Caitlin Clark</option>
-                <option value="Greta Thunberg (Activist)">Greta Thunberg</option>
-                <option value="Eddie Hall (Strongman)">Eddie Hall</option>
-                <option value="Jeremy Clarkson (TV personality)">Jeremy Clarkson</option>
-                <option value="Simone Biles (Gymnast)">Simone Biles</option>
-                <option value="Lewis Hamilton (Motor Racer)">Lewis Hamilton</option>
-                <option value="Faker (E-sports athlete)">Faker</option>
-                <option value="Lionel Messi (Football player)">Lionel Messi</option>
-                <option value="Scarlett Johansson (Actress)">Scarlett Johansson</option>
-                <option value="Oprah Winfrey (Media personality)">Oprah Winfrey</option>
-                <option value="David Attenborough (Activist)">David Attenborough</option>
-            </select>
-        </div>
-        <div class="inputs">
-            <label for="player2">Choose your second player:</label>
-            <select id="player2">
-                <option value="Hiyori Kon (Sumo wrestler)">Hyori Kon</option>
-                <option value="Magnus Carlsen (Chess player)">Magnus Carlsen</option>
-                <option value="Lionel Messi (Football player)">Lionel Messi</option>
-                <option value="Michael Jordan (Basketball player)">Michael Jordan</option>
-                <option value="Shohei Ohtani (Baseball player)">Shohei Ohtani</option>
-                <option value="Serena Williams (Tennis player)">Serena Williams</option>
-                <option value="Michael Phelps (Swimmer)">Michael Phelps</option>
-                <option value="Adele (Singer)">Adele</option>
-                <option value="Chris Hoy (Cyclist)">Chris Hoy</option>
-                <option value="Jackie Chan (Martial artist/actor)">Jackie Chan</option>
-                <option value="Keir Starmer (Politician)">Keir Starmer</option>
-                <option value="Jeon Jungkook (Singer)">Jeon Jungkook</option>
-                <option value="Yuzuru Hanyu (Figure skater)">Yuzuru Hanyu</option>
-                <option value="Donald Trump (American president)">Donald Trump</option>
-                <option value="Tiger Woods (Golfer)">Tiger Woods</option>
-                <option value="Caitlin Clark (Basketball player)">Caitlin Clark</option>
-                <option value="Greta Thunberg (Activist)">Greta Thunberg</option>
-                <option value="Eddie Hall (Strongman)">Eddie Hall</option>
-                <option value="Jeremy Clarkson (TV personality)">Jeremy Clarkson</option>
-                <option value="Simone Biles (Gymnast)">Simone Biles</option>
-                <option value="Lewis Hamilton (Motor Racer)">Lewis Hamilton</option>
-                <option value="Faker (E-sports athlete)">Faker</option>
-                <option value="Lionel Messi (Football player)">Lionel Messi</option>
-                <option value="Scarlett Johansson (Actress)">Scarlett Johansson</option>
-                <option value="Oprah Winfrey (Media personality)">Oprah Winfrey</option>
-                <option value="David Attenborough (Activist)">David Attenborough</option>
-            </select>
-        </div>
-        <div class="inputs">
-            <label for="event">Choose your event:</label>
-            <select name="event" id="event">
-                <option value="Bingo">Bingo</option>
-                <option value="Hula Hooping">Hula Hooping</option>
-                <option value="Longest time staying awake">Longest time staying awake</option>
-                <option value="Reaching the top shelf">Reaching the top shelf</option>
-                <option value="Juggling">Juggling</option>
-                <option value="Fishing the biggest catch">Fishing the biggest catch</option>
-                <option value="Thumb War">Thumb War</option>
-                <option value="Quidditch match">Quidditch match</option>
-                <option value="Spouse Carrying Race">Spouse Carrying Race</option>
-                <option value="Typing Speed Test">Typing Speed Test</option>
-                <option value="Cheese Rolling">Cheese Rolling</option>
-                <option value="Most plates of Sunday roasts eaten">Most plates of Sunday roasts eaten</option>
-                <option value="Egg and Spoon race">Egg and Spoon race</option>
-                <option value="Rap Battle">Rap Battle</option>
-                <option value="Fastest time to finish a pint of beer">Fastest time to finish a pint of beer</option>
-            </select>
-        </div>
-
-        <div class="center">
-            <button id="simulateBtn" class="btn btn-primary">Shake</button>
-        </div>
-        
-        <div>
-            <img id = "ball" alt="Crystal Ball" src="{{ url_for('static', filename='pixil-frame-0.png') }}" width = 387.5 height = 375>
-        </div>
-
-
-
-    </body>
-</html>
-
-<script src="{{ url_for('static', filename='crystalBall.js') }}"></script>
-
-<div id="results" style="margin-top:20px; font-weight:bold;"></div>
-
-<script>
-    document.getElementById('simulateBtn').addEventListener('click', async () => {
-        shake();
-
-        const player1 = document.getElementById('player1').value;
-        const player2 = document.getElementById('player2').value;
-        const event = document.getElementById('event').value;
-
-        const response = await fetch('/compare', {
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({player1, player2, event})
-        });
-
-        const result = await response.json();
-        if (result.error) {
-            document.getElementById('results').innerText = result.error;
-        } else {
-            document.getElementById('results').innerText = 
-                `${result.winner} wins!\nCommentary: ${result.commentary}`;
+    <style>
+        @font-face {
+            font-family: 'Minecraft';
+            src: url("{{ url_for('static', filename='minecraft.ttf') }}") format('truetype');
         }
-    });
 
-</script>
+        body {
+            font-family: 'Minecraft', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center">
+        <h1>Who will win?</h1>
+        <p>
+            Pit the world's biggest stars against each other in the most absurd, irrelevant, and glorious competitions imaginable.
+            Simply choose an event with your favourite two celebrities and the crystal ball will calculate using our algorithm
+            who is more likely to win!
+        </p>
+    </div>
+
+    <div class="inputs">
+        <label for="player1">Choose your first player:</label>
+        <select id="player1">
+            {% for ath in athletes %}
+            <option value="{{ ath }}">{{ ath }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <div class="inputs">
+        <label for="player2">Choose your second player:</label>
+        <select id="player2">
+            {% for ath in athletes %}
+            <option value="{{ ath }}">{{ ath }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <div class="inputs">
+        <label for="event">Choose your event:</label>
+        <select id="event">
+            {% for act in activities %}
+            <option value="{{ act }}">{{ act }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <div class="center">
+        <button id="simulateBtn" class="btn btn-primary" onClick="shake()">Shake</button>
+    </div>
+
+    <div class="center">
+        <img id="ball"
+             alt="Crystal Ball"
+             src="{{ url_for('static', filename='pixil-frame-0.png') }}"
+             width="387.5" height="375">
+    </div>
+
+    <div id="results" class="center" style="margin-top:20px; font-weight:bold;"></div>
+
+    <script src="{{ url_for('static', filename='crystalBall.js') }}"></script>
+</body>
+</html>

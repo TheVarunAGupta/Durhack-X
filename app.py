@@ -12,16 +12,12 @@ if not api_key:
     raise ValueError('Missing GEMINI_API_KEY in environment!')
 client = genai.Client(api_key=api_key)
 
-basedir = os.path.abspath(os.path.dirname(__file__))
-
-# Load athletes data
-with open(os.path.join(basedir, 'athelete_attributes.json'), 'r') as f:
+with open('static/athelete_attributes.json', 'r') as f:
     data = json.load(f)
 
 athletes = {ath['name']: ath['attributes'] for ath in data['athletes']}
 
-# Load activities data
-with open(os.path.join(basedir, 'activities.json'), 'r') as f:
+with open('static/activities.json', 'r') as f:
     data = json.load(f)
 
 activities = {}
@@ -100,9 +96,9 @@ def index():
 @app.route('/compare', methods=['POST'])
 def compare():
     data = request.json
-    athlete1 = data.get('player1')
-    athlete2 = data.get('player2')
-    activity_name = data.get('event')
+    athlete1 = data.get('athlete1')
+    athlete2 = data.get('athlete2')
+    activity_name = data.get('activity')
 
     if not athlete1 or not athlete2 or not activity_name:
         return jsonify({'error': 'Missing selection'}), 400
