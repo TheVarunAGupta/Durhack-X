@@ -12,12 +12,12 @@ if not api_key:
     raise ValueError('Missing GEMINI_API_KEY in environment!')
 client = genai.Client(api_key=api_key)
 
-with open('athelete_attributes.json', 'r') as f:
+with open('static/athelete_attributes.json', 'r') as f:
     data = json.load(f)
 
 athletes = {ath['name']: ath['attributes'] for ath in data['athletes']}
 
-with open('activities.json', 'r') as f:
+with open('static/activities.json', 'r') as f:
     data = json.load(f)
 
 activities = {}
