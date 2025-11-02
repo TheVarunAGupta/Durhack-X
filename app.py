@@ -4,6 +4,7 @@ import os
 from dotenv import load_dotenv
 from google import genai
 import json
+import math
 
 load_dotenv()
 
@@ -44,15 +45,34 @@ def generate_commentary(athlete1: str, athlete2: str, activity_name: str, winner
     return response.text
 
 
+# def calculate_weighted_score(athlete_stats: dict, activity_weights: dict) -> float:
+#     total = 0
+#     for attribute, weight in activity_weights.items():
+#         # multiply athlete attribute by weight if it exists
+#         athlete_value = athlete_stats.get(attribute, 0)
+#         total += athlete_value * weight
+
+#     # add randomness
+#     total += random.uniform(-2,2)
+#     return total
+
 def calculate_weighted_score(athlete_stats: dict, activity_weights: dict) -> float:
     total = 0
-    for attribute, weight in activity_weights.items():
-        # multiply athlete attribute by weight if it exists
-        athlete_value = athlete_stats.get(attribute, 0)
-        total += athlete_value * weight
+    # calculate sum of absolute weights for normalisation, avoid division by zero
+    weight_sum = sum(abs(w) for w in activity_weights.values()) or 1
 
-    # add randomness
-    total += random.uniform(-2,2)
+    for attribute, weight in activity_weights.items():
+        athlete_value = athlete_stats.get(attribute, 0)
+        # non linear scaling to reward higher attribute values, still works with negative values
+        scaled_value = math.copysign(abs(athlete_value) ** 1.2, athlete_value)
+        # add variation per attribute to simulate a bad/good day
+        variation = random.uniform(0.9, 1.1)
+        total += (scaled_value * weight * variation)
+
+        # normalise by weighted sum
+        total = total / weight_sum
+        # add some randomness
+        total += random.gauss(0, 1.5) # gaussian noise with mean 0 and stddev 1.5
     return total
 
 def compare_athletes(athlete1_name: str, athlete2_name: str, activity: dict):
@@ -66,8 +86,11 @@ def compare_athletes(athlete1_name: str, athlete2_name: str, activity: dict):
         return 'One or both athletes not found'
     
     score1 = calculate_weighted_score(athlete1, weights)
+    print(f' score1: {score1}')
     score2 = calculate_weighted_score(athlete2, weights)
+    print(f' score2: {score2}')
     total = abs(score1 - score2)
+    print(f' total: {total}')
 
     if score1 > score2:
         winner = athlete1_name
@@ -117,7 +140,7 @@ def compare():
     return jsonify(result)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5001)
+    app.run(debug=True, port=5002)
 
 # if __name__ == '__main__':
 #     athlete1 = 'David Attenborough'
