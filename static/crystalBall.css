@@ -1,5 +1,5 @@
 .shake{
-    animation: shake 1s;
+    animation: shake 1s linear infinite;
     
 }
 
@@ -19,7 +19,7 @@
 
 @font-face{
     font-family: Minecraft;
-    src: url(Minercaft.ttf);
+    src: url(Minecraft.ttf);
 }
 
 body{
@@ -38,19 +38,27 @@ body{
 
 .inputs{
     text-align: center;
-    padding-top: 2em;
+    padding-top: 1.5em;
     font-family:Minecraft;
     font-size:1em;
 }
 
+#results{
+    font-size:1.25em;
+    font-family:Minecraft;
+    max-width: 100ch;
+}
+
 img{
-    padding-left: 33em;
-    padding-top: 2.5em;
+    display: block;
+    margin: 0 auto;
+    width: 25%;
+    padding-top: 1.5em;
 }
 
 button{
     background-color:#3e8ec3;
-    margin-top: 2em;
+    margin-top: 1.5em;
     border: none;
     text-align: center;
     display: inline-block;
@@ -75,3 +83,4 @@ p {
     margin-right:auto;
 
 }
+
