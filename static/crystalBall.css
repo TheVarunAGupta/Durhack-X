@@ -49,11 +49,43 @@ body{
     max-width: 100ch;
 }
 
-img{
+#ball{
     display: block;
     margin: 0 auto;
     width: 25%;
     padding-top: 1.5em;
+}
+
+#face1{
+    position: absolute;
+    padding-top: 10em;
+    padding-left:10em;
+    transform: scale(0.4)
+
+}
+
+#face2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(1)
+
+}
+
+#face4{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: scale(1)
+
+}
+
+#face3{
+    position: absolute;
+    padding-top: 15em;
+    padding-left:65em;
+    transform: scale(0.75)
+
 }
 
 button{
